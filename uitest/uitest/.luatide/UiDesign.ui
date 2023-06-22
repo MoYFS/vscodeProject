@@ -1,0 +1,76 @@
+{
+	"device": {
+		"width": 512,
+		"height": 1024,
+		"bg": {
+			"color": "#980000",
+			"gradColor": "#FF9900",
+			"mainStop": 0,
+			"gradDir": "NONE",
+			"blendMode": "NORMAL"
+		}
+	},
+	"screens": [
+		{
+			"name": "ScreenA",
+			"layout": {
+				"type": "free",
+				"blocks": [
+					{
+						"width": 492,
+						"height": 228,
+						"name": "LvglSwitch1",
+						"body": "LvglSwitch1",
+						"x": 7,
+						"y": 643
+					},
+					{
+						"width": 247,
+						"height": 247,
+						"name": "LvglQrcode1",
+						"body": "LvglQrcode1",
+						"x": 127,
+						"y": 188
+					}
+				]
+			}
+		}
+	],
+	"schema": {
+		"LvglSwitch1": {
+			"comType": "LvglSwitch",
+			"comConf": {
+				"defaultStatus": {
+					"bgPart": {},
+					"indicPart": {},
+					"knobPart": {}
+				},
+				"events": {
+					"KEY_RIGHT": {
+						"type": "invoke"
+					},
+					"VALUE_CHANGED": {
+						"type": "invoke"
+					}
+				},
+				"state": false,
+				"anim": "ON",
+				"animTime": 1000
+			}
+		},
+		"LvglQrcode1": {
+			"comType": "LvglQrcode",
+			"comConf": {
+				"txt": "阿三大苏打",
+				"defaultStatus": {
+					"mainPart": {
+						"bg": {
+							"color": "#FF0000"
+						}
+					}
+				}
+			}
+		}
+	},
+	"resources": {}
+}

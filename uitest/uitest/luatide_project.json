@@ -1,0 +1,22 @@
+{
+	"version": "2.6",
+	"projectName": "uitest",
+	"projectType": "ui",
+	"corePath": "d:\\LuatIDE\\core_V1106\\LuatOS-SoC_V1106_EC618_FULL.soc",
+	"libPath": "C:\\Users\\moyufusheng\\AppData\\Roaming\\LuatIDE\\LuatideLib\\Air72XUX_LIB\\V2.4.3\\lib",
+	"moduleModel": "air72XUX/air82XUX",
+	"appFile": [
+		".luatide",
+		".luatide\\UiDesign.ui",
+		"LCD.lua",
+		"luatide_project.json",
+		"main.lua",
+		"qrcode.png",
+		"UiDesign.lua",
+		"UiHandle.lua",
+		"UiTp.lua"
+	],
+	"modulePort": "",
+	"ignore": [],
+	"simulatorRun": "enable"
+}
