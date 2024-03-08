@@ -18,5 +18,11 @@ module.exports={
         open:true,
         host: '127.0.0.1',
         port: '80'
+    },
+    module: {
+        rules: [
+            { test: /\.css$/, use:['style-loader', 'css-loader'] }
+        ]
     }
+
 }
