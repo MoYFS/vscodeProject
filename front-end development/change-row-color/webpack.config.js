@@ -13,5 +13,10 @@ module.exports={
         path:path.join(__dirname,'./dist'),//输出文件的路径
         filename:'main.js'//输出文件名
     },
-    plugins:[htmlplugin]
+    plugins:[htmlplugin],
+    devServer:{
+        open:true,
+        host: '127.0.0.1',
+        port: '80'
+    }
 }
