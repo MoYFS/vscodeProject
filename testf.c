@@ -1,26 +1,38 @@
 #include <stdio.h>
 
-unsigned long long factorial(int num) {
-    unsigned long long fact = 1;
-    for (int i = 1; i <= num; i++) {
-        fact *= i;
-    }
-    return fact;
-}
-
 int main() {
-    int n;
-    printf("请输入 n 的值：");
-    scanf("%d", &n);
-
-    int m = 0;
-    unsigned long long sum = 0;
-    while (sum < n) {
-        m++;
-        sum += factorial(m);
+int a[3],temp;
+scanf("%d%d%d",&a[0],&a[1],&a[2]);
+// if(a>b)
+// {
+//     temp=a;
+//     a=b;
+//     b=temp;
+// }
+// if(a>c)
+// {
+//     temp=a;
+//     a=c;
+//     c=temp;
+// }
+// if(b>c)
+// {
+//     temp=b;
+//     b=c;
+//     c=temp;
+// }
+for (int i=0;i<2;i++)
+{
+    for(int j=i;j<2;j++)
+    {
+        if(a[j]>a[j+1])
+        {
+            temp=a[j];
+            a[j]=a[j+1];
+            a[j+1]=temp;
+        }
     }
-
-    printf("满足不等式的最大 m 值为：%d\n", m - 1);
-
-    return 0;
+}
+printf("%d,%d,%d",a[0],a[1],a[2]);
+return 0;
 }
