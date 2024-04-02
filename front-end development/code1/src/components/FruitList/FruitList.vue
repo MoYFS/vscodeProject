@@ -35,6 +35,21 @@ export default {
     }
   },
   methods:{
+    onSettleClick(){
+      let amount=0;
+      let total=0
+      this.fruitlist.forEach(x=>{
+        if(x.state){
+          console.log(x.fruit+'数量为：'+x.count)
+          total+=x.count
+          amount+=x.count*x.price
+        }
+      })
+      if(amount===0 || total===0){
+        return
+      }
+      console.log('水果总数为:'+total+",总价为:"+amount)
+    },
     onSubClick(id){
       const findResult=this.fruitlist.find(x=>x.id===id)
       if(findResult && findResult.count>1){
@@ -79,7 +94,8 @@ export default {
     <div class="settle-box">
       <span>总数量：{{total }}</span>
       <span> 总价：{{ amount }}元</span>
-      <button type="button" class="btn btn-primary" :disabled="false" @click.stop="console.log('点击了结算')">结算</button>
+<!--      <button type="button" class="btn btn-primary" :disabled="false" @click.stop="console.log('点击了结算')">结算</button>-->
+      <button type="button" class="butt" :disabled="false" @click.stop="onSettleClick()">结算</button>
     </div>
   </div>
 </template>
@@ -148,5 +164,24 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+}
+.butt{
+  width: 80px;
+  height: 40px;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  //background: transparent;
+  background-color: skyblue;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
 }
 </style>
